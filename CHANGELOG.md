@@ -1,6 +1,11 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/pennant/compare/v1.8.2...1.x)
+## [Unreleased](https://github.com/laravel/pennant/compare/v1.8.3...1.x)
+
+## [v1.8.3](https://github.com/laravel/pennant/compare/v1.8.2...v1.8.3) - 2024-06-27
+
+* [1.x] Use constant for updated_at column name by [@thijsvdanker](https://github.com/thijsvdanker) in https://github.com/laravel/pennant/pull/108
+* [1.x] Fixes wrong column reference by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/pennant/pull/109
 
 ## [v1.8.2](https://github.com/laravel/pennant/compare/v1.8.1...v1.8.2) - 2024-06-20
 
