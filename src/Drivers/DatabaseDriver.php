@@ -144,7 +144,7 @@ class DatabaseDriver implements CanListStoredFeatures, Driver
     {
         $query = $this->newQuery();
 
-        $features = Collection::make($features)
+        $resolved = Collection::make($features)
             ->map(fn ($scopes, $feature) => Collection::make($scopes)
                 ->each(fn ($scope) => $query->orWhere(
                     fn ($q) => $q->where('name', $feature)->where('scope', Feature::serializeScope($scope))
@@ -154,7 +154,7 @@ class DatabaseDriver implements CanListStoredFeatures, Driver
 
         $inserts = new Collection;
 
-        $results = $features->map(fn ($scopes, $feature) => $scopes->map(function ($scope) use ($feature, $records, $inserts) {
+        $results = $resolved->map(fn ($scopes, $feature) => $scopes->map(function ($scope) use ($feature, $records, $inserts) {
             $filtered = $records->where('name', $feature)->where('scope', Feature::serializeScope($scope));
 
             if ($filtered->isNotEmpty()) {
