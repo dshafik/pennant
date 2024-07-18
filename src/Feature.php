@@ -36,6 +36,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Laravel\Pennant\PendingScopedFeatureInteraction for(mixed $scope)
  * @method static array load(string|array $features)
  * @method static array loadMissing(string|array $features)
+ * @method static array loadAll(string|array $features = null)
  * @method static mixed value(string $feature)
  * @method static array values(array $features)
  * @method static array all()
