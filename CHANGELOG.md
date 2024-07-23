@@ -1,6 +1,11 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/pennant/compare/v1.9.0...1.x)
+## [Unreleased](https://github.com/laravel/pennant/compare/v1.10.0...1.x)
+
+## [v1.10.0](https://github.com/laravel/pennant/compare/v1.9.0...v1.10.0) - 2024-07-18
+
+* Fixes purge output message when nothing is purged by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/pennant/pull/114
+* Add `loadAll` method by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/pennant/pull/113
 
 ## [v1.9.0](https://github.com/laravel/pennant/compare/v1.8.3...v1.9.0) - 2024-07-08
 
