@@ -660,7 +660,7 @@ class ArrayDriverTest extends TestCase
 
         Feature::active('foo');
 
-        Auth::login($user = new User());
+        Auth::login($user = new User);
         Feature::active('foo');
 
         Feature::resolveScopeUsing(fn () => 'bar');
@@ -987,7 +987,7 @@ class ArrayDriverTest extends TestCase
     public function test_feature_class_dependencies_do_not_go_stale()
     {
         $createContainer = function () {
-            $container = new Container();
+            $container = new Container;
             $container->singleton(FeatureDependency::class);
             $container->instance('events', new class
             {

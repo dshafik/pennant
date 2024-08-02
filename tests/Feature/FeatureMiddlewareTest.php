@@ -21,7 +21,7 @@ class FeatureMiddlewareTest extends TestCase
     {
         parent::setUp();
 
-        $this->middleware = new EnsureFeaturesAreActive();
+        $this->middleware = new EnsureFeaturesAreActive;
     }
 
     public function test_it_throws_a_http_exception_if_feature_is_not_defined(): void
@@ -31,7 +31,7 @@ class FeatureMiddlewareTest extends TestCase
 
         $this->middleware->handle(
             request: $this->createRequest('test', 'get'),
-            next: fn () => new Response(),
+            next: fn () => new Response,
             features: 'test',
         );
     }
@@ -46,7 +46,7 @@ class FeatureMiddlewareTest extends TestCase
             Response::HTTP_OK,
             $this->middleware->handle(
                 request: $this->createRequest('test', 'get'),
-                next: fn () => new Response(),
+                next: fn () => new Response,
                 features: 'test',
             )->getStatusCode(),
         );
@@ -59,7 +59,7 @@ class FeatureMiddlewareTest extends TestCase
 
         $this->middleware->handle(
             $this->createRequest('test', 'get'),
-            fn () => new Response(),
+            fn () => new Response,
             'test', 'another',
         );
     }
@@ -72,7 +72,7 @@ class FeatureMiddlewareTest extends TestCase
 
         $response = $this->middleware->handle(
             $this->createRequest('test', 'get'),
-            fn () => new Response(),
+            fn () => new Response,
             'test', 'another',
         );
 
@@ -92,7 +92,7 @@ class FeatureMiddlewareTest extends TestCase
             Response::HTTP_OK,
             $this->middleware->handle(
                 $this->createRequest('test', 'get'),
-                fn () => new Response(),
+                fn () => new Response,
                 'test', 'another',
             )->getStatusCode(),
         );

@@ -787,7 +787,7 @@ class DatabaseDriverTest extends TestCase
 
         Feature::active('foo');
 
-        Auth::login($user = new User());
+        Auth::login($user = new User);
         Feature::active('foo');
 
         Feature::resolveScopeUsing(fn () => 'bar');
@@ -1309,7 +1309,7 @@ class DatabaseDriverTest extends TestCase
             if (Str::startsWith($event->sql, 'insert into "features"')) {
                 $insertAttempts++;
                 DB::table('features')->delete();
-                throw new UniqueConstraintViolationException($event->connectionName, $event->sql, $event->bindings, new RuntimeException());
+                throw new UniqueConstraintViolationException($event->connectionName, $event->sql, $event->bindings, new RuntimeException);
             }
         });
 
@@ -1333,7 +1333,7 @@ class DatabaseDriverTest extends TestCase
         DB::listen(function (QueryExecuted $event) use (&$insertAttempts) {
             if (Str::startsWith($event->sql, 'insert into "features"')) {
                 $insertAttempts++;
-                throw new UniqueConstraintViolationException($event->connectionName, $event->sql, $event->bindings, new RuntimeException());
+                throw new UniqueConstraintViolationException($event->connectionName, $event->sql, $event->bindings, new RuntimeException);
             }
         });
 
@@ -1351,7 +1351,7 @@ class DatabaseDriverTest extends TestCase
             if (Str::startsWith($event->sql, 'insert into "features"')) {
                 $insertAttempts++;
                 DB::table('features')->delete();
-                throw new UniqueConstraintViolationException($event->connectionName, $event->sql, $event->bindings, new RuntimeException());
+                throw new UniqueConstraintViolationException($event->connectionName, $event->sql, $event->bindings, new RuntimeException);
             }
         });
 
@@ -1375,7 +1375,7 @@ class DatabaseDriverTest extends TestCase
         DB::listen(function (QueryExecuted $event) use (&$insertAttempts) {
             if (Str::startsWith($event->sql, 'insert into "features"')) {
                 $insertAttempts++;
-                throw new UniqueConstraintViolationException($event->connectionName, $event->sql, $event->bindings, new RuntimeException());
+                throw new UniqueConstraintViolationException($event->connectionName, $event->sql, $event->bindings, new RuntimeException);
             }
         });
 
