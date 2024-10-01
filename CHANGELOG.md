@@ -1,6 +1,10 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/pennant/compare/v1.11.0...1.x)
+## [Unreleased](https://github.com/laravel/pennant/compare/v1.12.0...1.x)
+
+## [v1.12.0](https://github.com/laravel/pennant/compare/v1.11.0...v1.12.0) - 2024-09-30
+
+* [1.x] Add a new `[@featureany](https://github.com/featureany)` directive by [@ryangjchandler](https://github.com/ryangjchandler) in https://github.com/laravel/pennant/pull/122
 
 ## [v1.11.0](https://github.com/laravel/pennant/compare/v1.10.0...v1.11.0) - 2024-08-08
 
