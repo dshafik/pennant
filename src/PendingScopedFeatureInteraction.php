@@ -73,12 +73,13 @@ class PendingScopedFeatureInteraction
     /**
      * Load all defined features into memory.
      *
-     * @param  string|array<int, string>  $features
      * @return array<string, array<int, mixed>>
      */
     public function loadAll()
     {
-        return $this->load($this->driver->defined());
+        return $this->load(
+            $this->driver->definedFeaturesForScope($this->scope()[0])
+        );
     }
 
     /**
@@ -120,7 +121,9 @@ class PendingScopedFeatureInteraction
      */
     public function all()
     {
-        return $this->values($this->driver->defined());
+        return $this->values(
+            $this->driver->definedFeaturesForScope($this->scope()[0])
+        );
     }
 
     /**
