@@ -1,6 +1,14 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/pennant/compare/v1.12.0...1.x)
+## [Unreleased](https://github.com/laravel/pennant/compare/v1.13.0...1.x)
+
+## [v1.13.0](https://github.com/laravel/pennant/compare/v1.12.0...v1.13.0) - 2024-11-12
+
+* [1.x] Allow control over feature serialization by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/pennant/pull/125
+* [1.x] Allow retrieving all features for a scope when some features are defined for differing scopes by [@cosmastech](https://github.com/cosmastech) in https://github.com/laravel/pennant/pull/121
+* [1.x] Improve typing checks by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/pennant/pull/126
+* [1.x] Supports PHP 8.4 by [@crynobone](https://github.com/crynobone) in https://github.com/laravel/pennant/pull/128
+* [1.x] Allow external drivers to retrieve defined features for the given scope by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/pennant/pull/127
 
 ## [v1.12.0](https://github.com/laravel/pennant/compare/v1.11.0...v1.12.0) - 2024-09-30
 
