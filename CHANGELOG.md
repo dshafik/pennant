@@ -1,6 +1,10 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/pennant/compare/v1.13.0...1.x)
+## [Unreleased](https://github.com/laravel/pennant/compare/v1.14.0...1.x)
+
+## [v1.14.0](https://github.com/laravel/pennant/compare/v1.13.0...v1.14.0) - 2024-12-13
+
+* [1.x] Add before hook support to features with names by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/pennant/pull/130
 
 ## [v1.13.0](https://github.com/laravel/pennant/compare/v1.12.0...v1.13.0) - 2024-11-12
 
