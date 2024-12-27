@@ -2,7 +2,7 @@
 
 namespace Laravel\Pennant\Contracts;
 
-interface FlushableCache
+interface HasFlushableCache
 {
     /**
      * Flush the cache.
